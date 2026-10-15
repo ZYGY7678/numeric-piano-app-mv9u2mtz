@@ -26,26 +26,27 @@ public class MainActivity extends Activity {
         ScrollView scroll = new ScrollView(this);
         LinearLayout root = new LinearLayout(this);
         root.setOrientation(LinearLayout.VERTICAL);
-        root.setBackgroundColor(0xFFE0E0E0);
+        root.setBackgroundColor(0xFFF5F5F5);
         root.setGravity(Gravity.CENTER_HORIZONTAL);
-        root.setPadding(32, 32, 32, 32);
+        root.setPadding(48, 48, 48, 48);
 
         TextView title = new TextView(this);
         title.setText("נגן פסנתר - השתמש במקשי המספרים (1-8)");
-        title.setTextSize(18);
+        title.setTextSize(20);
         title.setGravity(Gravity.CENTER);
-        title.setPadding(0, 0, 0, 32);
+        title.setTextColor(0xFF333333);
+        title.setPadding(0, 0, 0, 48);
         root.addView(title);
 
         for (int i = 0; i < LABELS.length; i++) {
             final int index = i;
             Button key = new Button(this);
             key.setText(LABELS[i]);
-            key.setTextSize(22);
+            key.setTextSize(20);
             key.setBackgroundResource(R.drawable.piano_key);
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-                    ViewGroup.LayoutParams.MATCH_PARENT, 140);
-            params.setMargins(0, 10, 0, 10);
+                    ViewGroup.LayoutParams.MATCH_PARENT, 160);
+            params.setMargins(0, 16, 0, 16);
             key.setLayoutParams(params);
             key.setOnClickListener(new View.OnClickListener() {
                 @Override
